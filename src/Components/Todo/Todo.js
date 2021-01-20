@@ -1,13 +1,24 @@
 import React from "react";
-
-const Todo = ({ todo, DeleteTodo }) => {
+import "./../../App.css"
+const Todo = ({ todo, DeleteTodo, UpdateTodo }) => {
   return (
     <div>
-      <h1>
-        {todo.description} <button onClick={() =>{
-            DeleteTodo(todo.id)
-        }}>Delete</button>
-        <button>Update</button>
+      <h1 className="todo">
+        {todo.description}{" "}
+        <button
+          onClick={() => {
+            DeleteTodo(todo.id);
+          }}
+        >
+          Delete
+        </button>
+        <button
+          onClick={() => {
+            UpdateTodo(todo.id);
+          }}
+        >
+          Update
+        </button>
       </h1>
     </div>
   );

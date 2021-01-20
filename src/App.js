@@ -2,6 +2,7 @@ import React from "react";
 import Form from "./Components/Form/Form";
 import Header from "./Components/Header/Header";
 import TodoAppContaine from "./Components/TodoAppContainer/TodoAppContaine";
+import "./App.css"
 
 class App extends React.Component {
   state = {
@@ -19,13 +20,15 @@ class App extends React.Component {
       todos: filteredtodos,
     })
   };
-
+  UpdateTodo=(todoid)=>{
+    console.log(todoid)
+  }
   render = () => {
     return (
-      <div>
+      <div className="App">
         <Header />
         <Form addTodos={this.addTodos} />
-        <TodoAppContaine todos={this.state.todos} DeleteTodo={this.DeleteTodo} />
+        <TodoAppContaine todos={this.state.todos} DeleteTodo={this.DeleteTodo} UpdateTodo={this.UpdateTodo} />
       </div>
     );
   };
