@@ -3,7 +3,7 @@ import "./../../App.css"
 const Todo = ({ todo, DeleteTodo, UpdateTodo }) => {
   return (
     <div>
-      <h1 className="todo">
+      <li><h1 className="todo">
         {todo.description}{" "}
         <button
           onClick={() => {
@@ -19,7 +19,7 @@ const Todo = ({ todo, DeleteTodo, UpdateTodo }) => {
         >
           Update
         </button>
-      </h1>
+      </h1></li>
     </div>
   );
 };

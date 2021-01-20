@@ -5,7 +5,9 @@ const TodoAppContaine = ({todos,DeleteTodo,UpdateTodo}) => {
 
     return (
         <div>
-            {todos.map((todo)=><Todo todo={todo} key={todo.id} DeleteTodo={DeleteTodo} UpdateTodo={UpdateTodo}/>)}
+            <ul>
+                {todos.map((todo)=><Todo todo={todo} key={todo.id} DeleteTodo={DeleteTodo} UpdateTodo={UpdateTodo}/>)}
+            </ul>
         </div>
     )
 }
